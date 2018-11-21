@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -67,6 +68,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinnerArray.addAll(response.body());
 
         Spinner eventos = findViewById(R.id.evento);
+        Button botonLogin = findViewById(R.id.login);
+
         ArrayAdapter<Evento> adapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_spinner_item,
@@ -76,6 +79,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         eventos.setAdapter(adapter);
         eventos.setSelection(0);
         eventos.setOnItemSelectedListener(this);
+        botonLogin.setEnabled(true);
     }
 
     public void login(View v) {

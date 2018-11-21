@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -72,6 +73,8 @@ public class FormularioActivity extends AppCompatActivity implements AdapterView
         spinnerArray.addAll(response.body());
 
         Spinner carreras = findViewById(R.id.carrera);
+        Button botonLogin = findViewById(R.id.enviar);
+
         ArrayAdapter<Carrera> adapter = new ArrayAdapter<>(
                 this,
                 android.R.layout.simple_spinner_item,
@@ -81,6 +84,7 @@ public class FormularioActivity extends AppCompatActivity implements AdapterView
         carreras.setAdapter(adapter);
         carreras.setSelection(0);
         carreras.setOnItemSelectedListener(this);
+        botonLogin.setEnabled(true);
     }
 
     public void enviarDatos(View v) {
