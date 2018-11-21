@@ -1,39 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FormularioActivity">
 
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        app:srcCompat="@mipmap/ic_launcher_round" />
 
     <EditText
         android:hint="Boleta"
         android:id="@+id/boleta"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="number"/>
+        android:inputType="number"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:layout_below="@+id/logo" />
 
     <EditText
         android:id="@+id/nombre"
         android:hint="Nombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="100dp"
         android:layout_below="@+id/boleta" />
 
     <Spinner
         android:id="@+id/carrera"
-        android:hint="Evento"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/nombre">
-    </Spinner>
+        android:layout_below="@+id/nombre"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="100dp"
+        android:hint="Evento"></Spinner>
 
     <Button
         android:id="@+id/login"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/carrera"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorPrimary"
         android:onClick="enviarDatos"
-        android:text="Envíar datos" />
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Envíar datos"
+        android:textColor="@color/common_google_signin_btn_text_dark_default" />
 
 </RelativeLayout>
