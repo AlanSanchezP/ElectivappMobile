@@ -14,7 +14,7 @@ import retrofit2.http.Header;
 import retrofit2.http.POST;
 
 public interface Service {
-    public static final String BASE_URL = "http://192.168.0.13:8000/api/";
+    public static final String BASE_URL = "http://192.168.43.5:8000/api/";
 
     @GET("carreras")
     Call<List<Carrera>> listaCarreras();
